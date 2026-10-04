@@ -1,0 +1,17 @@
+=== INCIDENT CLIENT SCRIPT & UI POLICY DEMO ===
+1. Category change -> Subcategory cleared
+   PASS: subcategory = empty
+2. Impact = High -> Urgency auto-set to High
+   PASS: urgency = 1 (High)
+3. Impact = High -> UI Policy actions
+   PASS: assignment_group = mandatory
+   PASS: urgency = read-only
+4. Priority = Critical -> Warning
+   PASS: critical priority warning displayed
+5. onSubmit with High Impact + missing Assigned To
+   PASS: save blocked; Assigned To required
+6. onSubmit with valid Assigned To
+   PASS: save allowed
+7. onCellEdit State from list
+   PASS: list edit blocked; callback(false)
+=== DEMO RESULT: PASS ===

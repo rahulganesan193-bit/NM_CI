@@ -1,0 +1,23 @@
+{
+  "name": "High Impact Control",
+  "table": "incident",
+  "active": true,
+  "conditions": [
+    {
+      "field": "impact",
+      "operator": "is",
+      "value": "1"
+    }
+  ],
+  "reverse_if_false": true,
+  "actions": [
+    {
+      "field": "assignment_group",
+      "mandatory": true
+    },
+    {
+      "field": "urgency",
+      "read_only": true
+    }
+  ]
+}
